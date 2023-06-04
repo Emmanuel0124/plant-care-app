@@ -29,4 +29,10 @@ class SchedulesController < ApplicationController
     render :show
   end
 
+  def destroy
+    @schedule = Schedule.find_by(id: params[:id])
+    @schedule.destroy
+    render json: { message: "Schedule deleted" }
+  end
+
 end
