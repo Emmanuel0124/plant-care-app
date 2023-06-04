@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   post "/plants" => "plants#create"
   patch "/plants/:id" => "plants#update"
   delete "/plants/:id" => "plants#destroy"
+
+
+
+  get "/schedules" => "schedules#index"
+
 end
