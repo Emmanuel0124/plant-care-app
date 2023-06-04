@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get "/plants/:id" => "plants#show"
   post "/plants" => "plants#create"
   patch "/plants/:id" => "plants#update"
-
+  delete "/plants/:id" => "plants#destroy"
 end
