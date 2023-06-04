@@ -3,6 +3,11 @@ class PlantsController < ApplicationController
     @plants = Plant.all
     render :index
   end
+  def show
+    @plant = Plant.find_by(id: params[:id])
+    render :show
+  end
+
   def create
     @plant = Plant.create(
       name: params[:name],
