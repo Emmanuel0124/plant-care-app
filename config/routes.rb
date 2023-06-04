@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/schedules" => "schedules#index"
   get "/schedules/:id" => "schedules#show"
   post "/schedules" => "schedules#create"
+  patch "/schedules/:id" => "schedules#update"
 
 end
