@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
 
   get "/schedules" => "schedules#index"
+  post "/schedules" => "schedules#create"
 
 end
