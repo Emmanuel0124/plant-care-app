@@ -14,6 +14,7 @@ class PlantsController < ApplicationController
       description: params[:description],
       amount_of_sun: params[:amount_of_sun],
       days_to_water: params[:days_to_water],
+      image_url: params[:image_url],
     )
     render :show
   end
@@ -25,6 +26,7 @@ class PlantsController < ApplicationController
       description: params[:description],
       amount_of_sun: params[:amount_of_sun],
       days_to_water: params[:days_to_water],
+      image_url: params[:image_url],
     )
     render :show
   end
