@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all
+    @plants = current_user.plants
     render :index
   end
   def show
