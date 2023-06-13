@@ -11,7 +11,7 @@ class SchedulesController < ApplicationController
   def create
     @schedule = Schedule.create(
       plant_id: params[:plant_id],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       watering_start_date: params[:watering_start_date],
     )
     render :show
@@ -21,7 +21,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.find_by(id: params[:id])
     @schedule.update(
       plant_id: params[:plant_id],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       watering_start_date: params[:watering_start_date],
     )
     render :show
