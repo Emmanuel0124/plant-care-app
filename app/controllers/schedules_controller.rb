@@ -9,8 +9,11 @@ class SchedulesController < ApplicationController
   end
 
   def create
+
+    plant = Plant.find_by(name: params[:plant])
+
     @schedule = Schedule.create(
-      plant_id: params[:plant_id],
+      plant_id: plant.id,
       user_id: current_user.id,
       watering_start_date: params[:watering_start_date],
     )
